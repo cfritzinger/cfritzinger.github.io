@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Associate Head of School — Harbor Light Academy</title>
+  <meta name="description" content="Discover Julie Petty, Associate Head of School at Harbor Light Academy, dedicated to community involvement and education leadership." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #ffffff; color: #111111; }
+
+    /* Override bio-card to stack image on top on mobile, side-by-side on desktop */
+    .bio-card {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+
+    .announcement-img-wrap {
+      width: 100%;
+    }
+    .announcement-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* Placeholder for image to be added later */
+    .announcement-img-placeholder {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: #f0f0f0;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: #999;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+      border: 2px dashed #ccc;
+    }
+    .announcement-img-placeholder svg {
+      opacity: 0.4;
+    }
+
+    @media (max-width: 640px) {
+      .bio-card {
+        grid-template-columns: 1fr;
+      }
+      .announcement-img {
+        border-radius: 8px;
+      }
+      .announcement-img-placeholder {
+        border-radius: 8px;
+        aspect-ratio: 1 / 1;
+      }
+    }
+
+    /* Social icon nav */
+    .nav-fb {
+      display: flex !important;
+      align-items: center;
+      padding: 8px 10px !important;
+      color: rgba(255,255,255,0.65) !important;
+      transition: color 0.15s !important;
+    }
+    .nav-fb:hover { color: #1877F2 !important; background: rgba(255,255,255,0.08) !important; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ───────────────────────────────────────────────────── -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Harbor Light Academy home">
+      <img src="images/logo.jpg" alt="Harbor Light Academy" />
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.609.074-3.032.4-4.141 1.509C1.803 2.69 1.477 4.113 1.403 5.722 1.345 7.002 1.331 7.41 1.331 12c0 4.59.014 4.998.072 6.278.074 1.609.4 3.032 1.509 4.141 1.109 1.109 2.532 1.435 4.141 1.509 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.609-.074 3.032-.4 4.141-1.509 1.109-1.109 1.435-2.532 1.509-4.141.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.074-1.609-.4-3.032-1.509-4.141C19.08 1.812 17.657 1.486 16.048 1.412 14.768 1.354 14.36 1.34 12 1.34zm0 5.838a4.822 4.822 0 1 0 0 9.644 4.822 4.822 0 0 0 0-9.644zm0 7.951a3.129 3.129 0 1 1 0-6.258 3.129 3.129 0 0 1 0 6.258zm6.406-8.845a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25z"/></svg>
+        </a>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">
+          About Us <span class="chevron">▾</span>
+        </button>
+        <div class="dropdown">
+          <a href="our-mission.html">Our Mission</a>
+          <a href="our-vision.html">Our Vision</a>
+          <a href="head-of-school.html">Head of School</a>
+          <a href="associate-head-of-school.html">Associate Head of School</a>
+          <a href="faculty.html">Faculty</a>
+        </div>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">Academics <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="curriculum.html">Curriculum</a>
+          <a href="dress-code.html">Dress Code</a>
+        </div>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">Admissions <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="application.html">Application</a>
+          <a href="tuition-1.html">Tuition</a>
+          <a href="payments.html">Payments</a>
+        </div>
+      </li>
+      <li><a href="giving.html">Giving</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="application.html" class="nav-cta">Apply Now →</a></li>
+    </ul>
+    <button class="hamburger" onclick="openMobileNav()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ─────────────────────────────────────────────── -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="closeMobileNav()" style="margin-top:64px;">✕</button>
+  <a href="#">About Us</a>
+  <a href="our-mission.html" class="sub">Our Mission</a>
+  <a href="our-vision.html" class="sub">Our Vision</a>
+  <a href="head-of-school.html" class="sub">Head of School</a>
+  <a href="associate-head-of-school.html" class="sub">Associate Head of School</a>
+  <a href="faculty.html" class="sub">Faculty</a>
+  <a href="#">Academics</a>
+  <a href="curriculum.html" class="sub">Curriculum</a>
+  <a href="dress-code.html" class="sub">Dress Code</a>
+  <a href="#">Admissions</a>
+  <a href="application.html" class="sub">Application</a>
+  <a href="tuition-1.html" class="sub">Tuition</a>
+  <a href="payments.html" class="sub">Payments</a>
+  <a href="giving.html">Giving</a>
+  <a href="careers.html">Careers</a>
+  <a href="application.html" class="cta">Apply Now →</a>
+  <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" style="margin-top:0;">Facebook →</a>
+  <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" style="margin-top:0;">Instagram →</a>
+</div>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────────── -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-text">
+    <p class="eyebrow">Our Team</p>
+    <h1>Associate Head of School</h1>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+<main>
+
+  <p class="section-label">Leadership</p>
+
+  <div class="bio-card">
+
+    <div class="announcement-img-wrap">
+      <!-- Replace this placeholder with: <img src="images/julie-petty.jpg" alt="Julie Petty, Associate Head of School" class="announcement-img" /> -->
+      <div class="announcement-img-placeholder" role="img" aria-label="Photo of Julie Petty — coming soon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <span>Photo coming soon</span>
+      </div>
+    </div>
+
+    <div class="bio-info">
+      <p class="role">Associate Head of School</p>
+      <h2>Ms. Julie Petty</h2>
+
+      <p>Julie brings a heart for service, a passion for education, and a deep commitment to community to her role as Associate Head of School at Harbor Light Academy. A graduate of Old Dominion University, Julie earned her Bachelor of Science in Human Service Counseling with a minor in Psychology, equipping her with a strong foundation to support the spiritual, academic, and emotional growth of every student.</p>
+
+      <p>Raised in the Western Branch area and a resident of Smithfield for the past 22 years, Julie is deeply rooted in the local community. She began her career serving families in need at the HER Shelter in Portsmouth, where her faith and compassion guided her work. She later pursued entrepreneurship as the owner of The Frilly Lilly, a boutique named after her daughter, embracing creativity and connection within her community.</p>
+
+      <p>Julie has dedicated the past nine years to Trinity Lutheran School, where she has faithfully served in Marketing, Admissions, and most recently as Assistant Head of School. Throughout her time there, she has built strong relationships with students and families and has been passionate about fostering an environment where children are known, loved, and encouraged to grow in both faith and knowledge.</p>
+
+      <p>Julie and her husband, Mike, who is the Director of Operations at the Port of Virginia, reside in Smithfield with their dog, Charlotte. They are proud parents of two children: Reide, who will graduate from UVA Law School in May and begin a clerkship with a Virginia Supreme Court Justice in the Fall, and Lilly, a third-year student at Christopher Newport University pursuing a double major in Health Studies and Nursing.</p>
+
+      <p>Guided by her faith and a genuine love for students and families, Julie is excited to serve the Harbor Light Academy community and help lead the school forward with purpose, integrity, and a Christ-centered vision for the future. Welcome, Ms. Petty!</p>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+  © 2026 Harbor Light Academy &nbsp;·&nbsp; 14353 Benns Church Blvd, Smithfield, VA
+  &nbsp;·&nbsp;
+  <a href="mailto:admissions@harborlightacademy.com">admissions@harborlightacademy.com</a>
+</footer>
+
+<script>
+  function toggleMenu(btn) {
+    const li = btn.parentElement;
+    const isOpen = li.classList.contains('open');
+    document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) li.classList.add('open');
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#navLinks'))
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      closeMobileNav();
+    }
+  });
+  function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    document.body.style.overflow = 'hidden'; }
+  function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = '';       }
+</script>
+
+</body>
+</html>
