@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dress Code — Harbor Light Academy</title>
+  <meta name="description" content="Harbor Light Academy dress code — supporting a respectful, focused learning environment while helping students feel confident and comfortable each day." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    /* Intro tagline */
+    .dress-intro {
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto 64px;
+    }
+    .dress-intro p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--navy);
+      line-height: 1.65;
+    }
+
+    /* Category grid */
+    .dress-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Each category card */
+    .dress-card {
+      background: #ffffff;
+      border: 1px solid rgba(26, 32, 80, 0.1);
+      border-top: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 28px 24px 32px;
+      transition: box-shadow 0.18s, transform 0.18s;
+      width: 100%;
+      text-align: center;
+    }
+    .dress-card:hover {
+      box-shadow: 0 8px 32px rgba(26, 32, 80, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .dress-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(26,32,80,0.08);
+    }
+
+    .dress-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+    }
+    .dress-card ul li {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #444;
+      padding-left: 14px;
+      position: relative;
+    }
+    .dress-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .dress-intro p { font-size: 1rem; }
+    }
+
+    /* Facebook/Instagram nav icon styles (copied from index.html) */
+    .nav-fb {
+      display: flex !important;
+      align-items: center;
+      padding: 8px 10px !important;
+      color: rgba(255,255,255,0.65) !important;
+      transition: color 0.15s !important;
+    }
+    .nav-fb:hover { color: #1877F2 !important; background: rgba(255,255,255,0.08) !important; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ───────────────────────────────────────────────────── -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <a href="index.html" class="nav-logo" aria-label="Harbor Light Academy home">
+      <img src="images/logo.jpg" alt="Harbor Light Academy" />
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.609.074-3.032.4-4.141 1.509C1.803 2.69 1.477 4.113 1.403 5.722 1.345 7.002 1.331 7.41 1.331 12c0 4.59.014 4.998.072 6.278.074 1.609.4 3.032 1.509 4.141 1.109 1.109 2.532 1.435 4.141 1.509 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.609-.074 3.032-.4 4.141-1.509 1.109-1.109 1.435-2.532 1.509-4.141.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.074-1.609-.4-3.032-1.509-4.141C19.08 1.812 17.657 1.486 16.048 1.412 14.768 1.354 14.36 1.34 12 1.34zm0 5.838a4.822 4.822 0 1 0 0 9.644 4.822 4.822 0 0 0 0-9.644zm0 7.951a3.129 3.129 0 1 1 0-6.258 3.129 3.129 0 0 1 0 6.258zm6.406-8.845a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25z"/></svg>
+        </a>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">
+          Our Team <span class="chevron">▾</span>
+        </button>
+        <div class="dropdown">
+          <a href="https://harborlightacademy.com/head-of-school">Head of School</a>
+          <a href="https://harborlightacademy.com/associate-head-of-school">Associate Head of School</a>
+          <a href="https://harborlightacademy.com/faculty">Faculty</a>
+        </div>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">
+          Academics <span class="chevron">▾</span>
+        </button>
+        <div class="dropdown">
+          <a href="curriculum.html">Curriculum</a>
+          <a href="dress-code.html" class="active">Dress Code</a>
+        </div>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">
+          Admissions <span class="chevron">▾</span>
+        </button>
+        <div class="dropdown">
+          <a href="https://harborlightacademy.com/application">Application</a>
+          <a href="https://harborlightacademy.com/tuition-1">Tuition</a>
+          <a href="https://harborlightacademy.com/payments">Payments</a>
+        </div>
+      </li>
+      <li><a href="https://harborlightacademy.com/upcoming-events">Events</a></li>
+      <li><a href="https://harborlightacademy.com/giving">Giving</a></li>
+      <li><a href="https://harborlightacademy.com/careers">Careers</a></li>
+      <li><a href="https://harborlightacademy.com/application" class="nav-cta">Apply Now →</a></li>
+    </ul>
+
+    <button class="hamburger" onclick="openMobileNav()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ─────────────────────────────────────────────── -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+  <a href="#">Our Team</a>
+  <a href="https://harborlightacademy.com/head-of-school" class="sub">Head of School</a>
+  <a href="https://harborlightacademy.com/associate-head-of-school" class="sub">Associate Head of School</a>
+  <a href="https://harborlightacademy.com/faculty" class="sub">Faculty</a>
+  <a href="#">Academics</a>
+  <a href="curriculum.html" class="sub">Curriculum</a>
+  <a href="dress-code.html" class="sub">Dress Code</a>
+  <a href="#">Admissions</a>
+  <a href="https://harborlightacademy.com/application" class="sub">Application</a>
+  <a href="https://harborlightacademy.com/tuition-1" class="sub">Tuition</a>
+  <a href="https://harborlightacademy.com/payments" class="sub">Payments</a>
+  <a href="https://harborlightacademy.com/upcoming-events">Events</a>
+  <a href="https://harborlightacademy.com/giving">Giving</a>
+  <a href="https://harborlightacademy.com/careers">Careers</a>
+  <a href="https://harborlightacademy.com/application" class="cta">Apply Now →</a>
+  <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" class="cta" style="margin-top:0;">Facebook →</a>
+  <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" class="cta" style="margin-top:0;">Instagram →</a>
+</div>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────────── -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-text">
+    <p class="eyebrow">Academics</p>
+    <h1>Dress Code</h1>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+<main>
+
+  <div class="dress-intro">
+    <p>Our dress code supports a respectful, focused learning environment while helping students feel confident and comfortable each day.</p>
+  </div>
+
+  <p class="section-label">Guidelines by Category</p>
+
+  <div class="dress-grid">
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Tops</h2>
+      <ul>
+        <li>Solid polo or collared shirts</li>
+        <li>Small logos only (no larger than a quarter)</li>
+        <li>Shirts must be tucked in</li>
+        <li>Plain sweaters may be worn over collared shirts</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Bottoms</h2>
+      <ul>
+        <li>Khaki or navy pants, properly fitted</li>
+        <li>Belts required if pants have loops</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Shorts, Skirts &amp; Skorts</h2>
+      <ul>
+        <li>Must be within 2 inches of the knee</li>
+        <li>No cargo shorts</li>
+        <li>Skirts and jumpers: no shorter than 2 inches above the knee and no longer than mid-calf</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Shoes</h2>
+      <ul>
+        <li>Closed-back, secure shoes only (no Crocs or backless styles)</li>
+        <li>Laces must be tied</li>
+        <li>Athletic shoes required for PE</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Socks &amp; Leggings</h2>
+      <ul>
+        <li>Socks must be worn at all times</li>
+        <li>Tights/leggings must be white or navy</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Hair &amp; Appearance</h2>
+      <ul>
+        <li>Hair should be neat and natural</li>
+        <li>Boys' hair above the collar and no longer than mid-ear</li>
+        <li>Hair kept out of eyes</li>
+        <li>Jewelry and makeup should be simple and age-appropriate</li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+  © 2026 Harbor Light Academy &nbsp;·&nbsp; 14353 Benns Church Blvd, Smithfield, VA
+  &nbsp;·&nbsp;
+  <a href="mailto:admissions@harborlightacademy.com">admissions@harborlightacademy.com</a>
+</footer>
+
+<script>
+  function toggleMenu(btn) {
+    const li = btn.parentElement;
+    const isOpen = li.classList.contains('open');
+    document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) li.classList.add('open');
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#navLinks'))
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      closeMobileNav();
+    }
+  });
+  function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    document.body.style.overflow = 'hidden'; }
+  function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = '';       }
+</script>
+
+</body>
+</html>
