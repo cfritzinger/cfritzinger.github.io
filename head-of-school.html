@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Head of School — Harbor Light Academy</title>
+  <meta name="description" content="Discover the impactful vision of Head of School Kevin Goetz at Harbor Light Academy, fostering student growth and academic excellence." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #ffffff; color: #111111; }
+
+    /* Social icon nav */
+    .nav-fb {
+      display: flex !important;
+      align-items: center;
+      padding: 8px 10px !important;
+      color: rgba(255,255,255,0.65) !important;
+      transition: color 0.15s !important;
+    }
+    .nav-fb:hover { color: #1877F2 !important; background: rgba(255,255,255,0.08) !important; }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ───────────────────────────────────────────────────── -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Harbor Light Academy home">
+      <img src="images/logo.jpg" alt="Harbor Light Academy" />
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.609.074-3.032.4-4.141 1.509C1.803 2.69 1.477 4.113 1.403 5.722 1.345 7.002 1.331 7.41 1.331 12c0 4.59.014 4.998.072 6.278.074 1.609.4 3.032 1.509 4.141 1.109 1.109 2.532 1.435 4.141 1.509 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.609-.074 3.032-.4 4.141-1.509 1.109-1.109 1.435-2.532 1.509-4.141.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.074-1.609-.4-3.032-1.509-4.141C19.08 1.812 17.657 1.486 16.048 1.412 14.768 1.354 14.36 1.34 12 1.34zm0 5.838a4.822 4.822 0 1 0 0 9.644 4.822 4.822 0 0 0 0-9.644zm0 7.951a3.129 3.129 0 1 1 0-6.258 3.129 3.129 0 0 1 0 6.258zm6.406-8.845a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25z"/></svg>
+        </a>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">Our Team <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="head-of-school.html" class="active">Head of School</a>
+          <a href="https://harborlightacademy.com/associate-head-of-school">Associate Head of School</a>
+          <a href="https://harborlightacademy.com/faculty">Faculty</a>
+        </div>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">Academics <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="curriculum.html">Curriculum</a>
+          <a href="dress-code.html">Dress Code</a>
+        </div>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">Admissions <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="https://harborlightacademy.com/application">Application</a>
+          <a href="tuition.html">Tuition</a>
+          <a href="https://harborlightacademy.com/payments">Payments</a>
+        </div>
+      </li>
+      <li><a href="https://harborlightacademy.com/upcoming-events">Events</a></li>
+      <li><a href="https://harborlightacademy.com/giving">Giving</a></li>
+      <li><a href="https://harborlightacademy.com/careers">Careers</a></li>
+      <li><a href="https://harborlightacademy.com/application" class="nav-cta">Apply Now →</a></li>
+    </ul>
+    <button class="hamburger" onclick="openMobileNav()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ─────────────────────────────────────────────── -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+  <a href="#">Our Team</a>
+  <a href="head-of-school.html" class="sub">Head of School</a>
+  <a href="https://harborlightacademy.com/associate-head-of-school" class="sub">Associate Head of School</a>
+  <a href="https://harborlightacademy.com/faculty" class="sub">Faculty</a>
+  <a href="#">Academics</a>
+  <a href="curriculum.html" class="sub">Curriculum</a>
+  <a href="dress-code.html" class="sub">Dress Code</a>
+  <a href="#">Admissions</a>
+  <a href="https://harborlightacademy.com/application" class="sub">Application</a>
+  <a href="tuition.html" class="sub">Tuition</a>
+  <a href="https://harborlightacademy.com/payments" class="sub">Payments</a>
+  <a href="https://harborlightacademy.com/upcoming-events">Events</a>
+  <a href="https://harborlightacademy.com/giving">Giving</a>
+  <a href="https://harborlightacademy.com/careers">Careers</a>
+  <a href="https://harborlightacademy.com/application" class="cta">Apply Now →</a>
+  <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" class="cta" style="margin-top:0;">Facebook →</a>
+  <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" class="cta" style="margin-top:0;">Instagram →</a>
+</div>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────────── -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-text">
+    <p class="eyebrow">Our Team</p>
+    <h1>Head of School</h1>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+<main>
+
+  <p class="section-label">Leadership</p>
+
+  <div class="bio-card">
+
+    <div>
+      <div class="bio-photo">
+        <img src="images/announcement.jpg"
+          alt="Kevin Goetz, Head of School"
+        />
+      </div>
+    </div>
+
+    <div class="bio-info">
+      <p class="role">Head of School</p>
+      <h2>Mr. Kevin Goetz</h2>
+
+      <p>Kevin believes every school begins with a great faculty and staff who recognize the importance of students and their families. It's a symbiotic relationship in which both parties can help each other grow their shared students into leaders. His vision of school leadership blends his own upbringing in a small town in central New Jersey — where "it takes a village" was a daily mantra — with a focus on strong academics and developing a student's moral compass.</p>
+
+      <p>Kevin earned his undergraduate degree from the University of Richmond, majoring in History and Sociology. He then pursued graduate studies at the College of William &amp; Mary, earning his Masters and Educational Specialist certificates in School Psychology. After interning in Prince Edward County schools, he joined York County School Division as a school psychologist in 2001. Through the support of strong supervisors, he earned promotions to Lead School Psychologist and Instructional Specialist before transitioning into building administration as an assistant principal at Yorktown Elementary. He also served as a middle school assistant principal at John F. Kennedy Middle School in Suffolk before becoming principal at Carrollton Elementary School in Isle of Wight County. During his three-year tenure at Carrollton, the school earned a Distinguished School award from the Virginia Department of Education for its academic accomplishments and its loving, family-friendly atmosphere.</p>
+
+      <p>Since August 2015, Kevin led Trinity Lutheran School in Newport News, growing the school in enrollment, fundraising, academics, and community outreach. Trinity experienced five consecutive years of significantly growing enrollment, with re-enrollment rates consistently at 95% or higher. He served as lead for two school accreditation visits, earning multiple commendations for best practices from both visiting teams. Yet beyond all those data points, Kevin is most proud of the beautiful, student-focused school community that was welcoming to all families.</p>
+
+      <p>In addition, Kevin has served as an adjunct instructor in the School of Education at Old Dominion University since 2010, teaching classes in classroom management, special education law, and human growth and development. He has earned several department awards recognizing both his teaching — which bridges the theoretical with day-to-day practice — and his meaningful connections with students.</p>
+
+      <p>Kevin lives in Smithfield with his wife Susan, a public-school deputy superintendent, and their two dogs. He has three children: Riley, a University of Virginia graduate majoring in Statistics and Psychology; Carter, a United States Air Force Academy recruit and student-athlete in soccer; and Avery, a high school sophomore.</p>
+
+      <p>Kevin is incredibly excited and feels so blessed for this opportunity to help build a new school in a beautiful and growing community that values strong academics while developing the whole child into moral leaders within a Christian school environment full of supportive adults. Welcome, Mr. Goetz!</p>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+  © 2026 Harbor Light Academy &nbsp;·&nbsp; 14353 Benns Church Blvd, Smithfield, VA
+  &nbsp;·&nbsp;
+  <a href="mailto:admissions@harborlightacademy.com">admissions@harborlightacademy.com</a>
+</footer>
+
+<script>
+  function toggleMenu(btn) {
+    const li = btn.parentElement;
+    const isOpen = li.classList.contains('open');
+    document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) li.classList.add('open');
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#navLinks'))
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      closeMobileNav();
+    }
+  });
+  function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    document.body.style.overflow = 'hidden'; }
+  function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = '';       }
+</script>
+
+</body>
+</html>
