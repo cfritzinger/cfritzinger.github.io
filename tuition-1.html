@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tuition — Harbor Light Academy</title>
+  <meta name="description" content="Harbor Light Academy 2026-27 tuition information, application fees, registration fees, and extended care rates." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #ffffff; color: #111111; }
+
+    /* Tuition table */
+    .tuition-table-wrap {
+      margin-bottom: 48px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(26,32,80,0.12);
+      box-shadow: 0 4px 24px rgba(26,32,80,0.07);
+    }
+    .tuition-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.97rem;
+    }
+    .tuition-table thead tr {
+      background: var(--navy);
+    }
+    .tuition-table thead th {
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 16px 24px;
+      text-align: left;
+    }
+    .tuition-table thead th:not(:first-child) { text-align: right; }
+    .tuition-table tbody tr {
+      border-bottom: 1px solid rgba(26,32,80,0.08);
+      transition: background 0.12s;
+    }
+    .tuition-table tbody tr:last-child { border-bottom: none; }
+    .tuition-table tbody tr:hover { background: var(--gold-pale); }
+    .tuition-table tbody td {
+      padding: 16px 24px;
+      color: #222;
+    }
+    .tuition-table tbody td:first-child {
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .tuition-table tbody td:not(:first-child) {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Payment note callout */
+    .payment-note {
+      background: var(--navy);
+      border-left: 4px solid var(--gold);
+      border-radius: 10px;
+      padding: 32px 36px;
+      margin-bottom: 64px;
+    }
+    .payment-note p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+      line-height: 1.75;
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+    }
+
+    /* Fee cards */
+    .fee-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+    .fee-card {
+      background: #ffffff;
+      border: 1px solid rgba(26,32,80,0.1);
+      border-top: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: box-shadow 0.18s, transform 0.18s;
+    }
+    .fee-card:hover {
+      box-shadow: 0 8px 32px rgba(26,32,80,0.1);
+      transform: translateY(-3px);
+    }
+    .fee-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(26,32,80,0.08);
+    }
+    .fee-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(26,32,80,0.05);
+      font-size: 0.92rem;
+    }
+    .fee-row:last-child { border-bottom: none; }
+    .fee-row .fee-label { color: #555; }
+    .fee-row .fee-amount {
+      font-weight: 700;
+      color: var(--navy);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    /* Extended care special layout */
+    .fee-card.extended .fee-times {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .fee-card.extended .fee-rate {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* Mission footer callout */
+    .mission-callout {
+      background: var(--gold-pale);
+      border-radius: 10px;
+      padding: 36px 40px;
+      text-align: center;
+    }
+    .mission-callout p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+      line-height: 1.8;
+      color: var(--navy);
+    }
+
+    /* Social icon nav */
+    .nav-fb {
+      display: flex !important;
+      align-items: center;
+      padding: 8px 10px !important;
+      color: rgba(255,255,255,0.65) !important;
+      transition: color 0.15s !important;
+    }
+    .nav-fb:hover { color: #1877F2 !important; background: rgba(255,255,255,0.08) !important; }
+
+    @media (max-width: 600px) {
+      .tuition-table thead th,
+      .tuition-table tbody td { padding: 12px 14px; }
+      .payment-note { padding: 24px 20px; }
+      .mission-callout { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ───────────────────────────────────────────────────── -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Harbor Light Academy home">
+      <img src="images/logo.jpg" alt="Harbor Light Academy" />
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.609.074-3.032.4-4.141 1.509C1.803 2.69 1.477 4.113 1.403 5.722 1.345 7.002 1.331 7.41 1.331 12c0 4.59.014 4.998.072 6.278.074 1.609.4 3.032 1.509 4.141 1.109 1.109 2.532 1.435 4.141 1.509 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.609-.074 3.032-.4 4.141-1.509 1.109-1.109 1.435-2.532 1.509-4.141.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.074-1.609-.4-3.032-1.509-4.141C19.08 1.812 17.657 1.486 16.048 1.412 14.768 1.354 14.36 1.34 12 1.34zm0 5.838a4.822 4.822 0 1 0 0 9.644 4.822 4.822 0 0 0 0-9.644zm0 7.951a3.129 3.129 0 1 1 0-6.258 3.129 3.129 0 0 1 0 6.258zm6.406-8.845a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25z"/></svg>
+        </a>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">Our Team <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="https://harborlightacademy.com/head-of-school">Head of School</a>
+          <a href="https://harborlightacademy.com/associate-head-of-school">Associate Head of School</a>
+          <a href="https://harborlightacademy.com/faculty">Faculty</a>
+        </div>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">Academics <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="curriculum.html">Curriculum</a>
+          <a href="dress-code.html">Dress Code</a>
+        </div>
+      </li>
+      <li>
+        <button onclick="toggleMenu(this)" aria-haspopup="true">Admissions <span class="chevron">▾</span></button>
+        <div class="dropdown">
+          <a href="https://harborlightacademy.com/application">Application</a>
+          <a href="tuition.html" class="active">Tuition</a>
+          <a href="https://harborlightacademy.com/payments">Payments</a>
+        </div>
+      </li>
+      <li><a href="https://harborlightacademy.com/upcoming-events">Events</a></li>
+      <li><a href="https://harborlightacademy.com/giving">Giving</a></li>
+      <li><a href="https://harborlightacademy.com/careers">Careers</a></li>
+      <li><a href="https://harborlightacademy.com/application" class="nav-cta">Apply Now →</a></li>
+    </ul>
+    <button class="hamburger" onclick="openMobileNav()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ─────────────────────────────────────────────── -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+  <a href="#">Our Team</a>
+  <a href="https://harborlightacademy.com/head-of-school" class="sub">Head of School</a>
+  <a href="https://harborlightacademy.com/associate-head-of-school" class="sub">Associate Head of School</a>
+  <a href="https://harborlightacademy.com/faculty" class="sub">Faculty</a>
+  <a href="#">Academics</a>
+  <a href="curriculum.html" class="sub">Curriculum</a>
+  <a href="dress-code.html" class="sub">Dress Code</a>
+  <a href="#">Admissions</a>
+  <a href="https://harborlightacademy.com/application" class="sub">Application</a>
+  <a href="tuition.html" class="sub">Tuition</a>
+  <a href="https://harborlightacademy.com/payments" class="sub">Payments</a>
+  <a href="https://harborlightacademy.com/upcoming-events">Events</a>
+  <a href="https://harborlightacademy.com/giving">Giving</a>
+  <a href="https://harborlightacademy.com/careers">Careers</a>
+  <a href="https://harborlightacademy.com/application" class="cta">Apply Now →</a>
+  <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" class="cta" style="margin-top:0;">Facebook →</a>
+  <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" class="cta" style="margin-top:0;">Instagram →</a>
+</div>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────────── -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-text">
+    <p class="eyebrow">Admissions</p>
+    <h1>Tuition &amp; Fees</h1>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+<main>
+
+  <p class="section-label">2026–27 Academic Year</p>
+
+  <!-- Tuition table -->
+  <div class="tuition-table-wrap">
+    <table class="tuition-table">
+      <thead>
+        <tr>
+          <th>Grade Level</th>
+          <th>Annual Tuition</th>
+          <th>Monthly Tuition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Preschool Full-Day</td>
+          <td>$9,000.00</td>
+          <td>$750.00 / month</td>
+        </tr>
+        <tr>
+          <td>Kindergarten</td>
+          <td>$11,525.00</td>
+          <td>$960.42 / month</td>
+        </tr>
+        <tr>
+          <td>Grades 1–5</td>
+          <td>$12,725.00</td>
+          <td>$1,060.42 / month</td>
+        </tr>
+        <tr>
+          <td>Grades 6–8</td>
+          <td>$12,850.00</td>
+          <td>$1,070.83 / month</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payment note -->
+  <div class="payment-note">
+    <p>Tuition may be paid annually or through a monthly payment plan. Monthly payments reflect a 12-month distribution of tuition. Tuition represents an annual financial commitment for the academic year.</p>
+  </div>
+
+  <!-- Fee cards -->
+  <p class="section-label">Additional Fees</p>
+
+  <div class="fee-grid">
+
+    <div class="fee-card">
+      <h2 class="fee-card-title">Application Fee</h2>
+      <div class="fee-row">
+        <span class="fee-label">Preschool</span>
+        <span class="fee-amount">$75</span>
+      </div>
+      <div class="fee-row">
+        <span class="fee-label">Kindergarten – Grade 8</span>
+        <span class="fee-amount">$125</span>
+      </div>
+    </div>
+
+    <div class="fee-card">
+      <h2 class="fee-card-title">Registration Fee</h2>
+      <div class="fee-row">
+        <span class="fee-label">Preschool – Grade 8</span>
+        <span class="fee-amount">$500</span>
+      </div>
+    </div>
+
+    <div class="fee-card extended">
+      <h2 class="fee-card-title">Extended Care</h2>
+      <div class="fee-times">
+        6:45 am – 7:45 am<br>
+        3:00 pm – 6:00 pm
+      </div>
+      <div class="fee-row">
+        <span class="fee-label">Rate</span>
+        <span class="fee-amount">$9.00 / hr (prorated)</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mission callout -->
+  <div class="mission-callout">
+    <p>Our mission is to light the way and cultivate growth. We believe every child is created for an abundant, fruitful life. Rooted in community and shaped by a Christian environment, we educate the whole child — mind, heart, and spirit — through academic excellence, character development, and compassion, preparing students to live with purpose and impact.</p>
+  </div>
+
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+  © 2026 Harbor Light Academy &nbsp;·&nbsp; 14353 Benns Church Blvd, Smithfield, VA
+  &nbsp;·&nbsp;
+  <a href="mailto:admissions@harborlightacademy.com">admissions@harborlightacademy.com</a>
+</footer>
+
+<script>
+  function toggleMenu(btn) {
+    const li = btn.parentElement;
+    const isOpen = li.classList.contains('open');
+    document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) li.classList.add('open');
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#navLinks'))
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      closeMobileNav();
+    }
+  });
+  function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    document.body.style.overflow = 'hidden'; }
+  function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = '';       }
+</script>
+
+</body>
+</html>
