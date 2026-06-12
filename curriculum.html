@@ -9,15 +9,9 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     /* ── Curriculum-page overrides ─────────────────────────── */
-    body {
-      background: #ffffff;
-      color: #111111;
-    }
+    body { background: #ffffff; color: #111111; }
 
-    /* Grade-band section */
-    .grade-band {
-      margin-bottom: 72px;
-    }
+    .grade-band { margin-bottom: 72px; }
     .grade-band:last-child { margin-bottom: 0; }
 
     .grade-band-header {
@@ -53,13 +47,11 @@
       margin-bottom: 4px;
     }
 
-    /* Curriculum cards grid */
     .curriculum-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 20px;
     }
-
     .curriculum-card {
       background: #ffffff;
       border: 1px solid rgba(26, 32, 80, 0.1);
@@ -72,7 +64,6 @@
       box-shadow: 0 8px 32px rgba(26, 32, 80, 0.1);
       transform: translateY(-3px);
     }
-
     .card-subject {
       font-size: 0.65rem;
       font-weight: 700;
@@ -95,7 +86,6 @@
       color: #444;
     }
 
-    /* Pre-K hero callout */
     .prek-callout {
       background: var(--navy);
       border-radius: 12px;
@@ -127,7 +117,6 @@
       color: rgba(255,255,255,0.75);
     }
 
-    /* Section divider */
     .band-divider {
       border: none;
       border-top: 1px solid rgba(26,32,80,0.1);
@@ -135,102 +124,25 @@
     }
 
     @media (max-width: 640px) {
-      .prek-callout {
-        grid-template-columns: 1fr;
-        padding: 28px 24px;
-        gap: 20px;
-      }
-      .curriculum-grid {
-        grid-template-columns: 1fr;
-      }
+      .prek-callout { grid-template-columns: 1fr; padding: 28px 24px; gap: 20px; }
+      .curriculum-grid { grid-template-columns: 1fr; }
     }
+
+    .mobile-nav-close { margin-top: 64px !important; }
+    .nav-fb {
+      display: flex !important;
+      align-items: center;
+      padding: 8px 10px !important;
+      color: rgba(255,255,255,0.65) !important;
+      transition: color 0.15s !important;
+    }
+    .nav-fb:hover { color: #1877F2 !important; background: rgba(255,255,255,0.08) !important; }
   </style>
 </head>
 <body>
 
-<!-- ── NAV ───────────────────────────────────────────────────── -->
-<nav aria-label="Main navigation">
-  <div class="nav-inner">
-
-    <a href="index.html" class="nav-logo" aria-label="Harbor Light Academy home">
-      <img src="images/logo.jpg" alt="Harbor Light Academy" />
-    </a>
-
-    <ul class="nav-links" id="navLinks">
-      <li>
-        <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" class="nav-fb" aria-label="Harbor Light Academy on Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.609.074-3.032.4-4.141 1.509C1.803 2.69 1.477 4.113 1.403 5.722 1.345 7.002 1.331 7.41 1.331 12c0 4.59.014 4.998.072 6.278.074 1.609.4 3.032 1.509 4.141 1.109 1.109 2.532 1.435 4.141 1.509 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.609-.074 3.032-.4 4.141-1.509 1.109-1.109 1.435-2.532 1.509-4.141.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.074-1.609-.4-3.032-1.509-4.141C19.08 1.812 17.657 1.486 16.048 1.412 14.768 1.354 14.36 1.34 12 1.34zm0 5.838a4.822 4.822 0 1 0 0 9.644 4.822 4.822 0 0 0 0-9.644zm0 7.951a3.129 3.129 0 1 1 0-6.258 3.129 3.129 0 0 1 0 6.258zm6.406-8.845a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25z"/></svg>
-        </a>
-      </li>
-      <li>
-        <button onclick="toggleMenu(this)" aria-haspopup="true">
-          About Us <span class="chevron">▾</span>
-        </button>
-        <div class="dropdown">
-          <a href="our-mission.html">Our Mission</a>
-          <a href="our-vision.html">Our Vision</a>
-          <a href="head-of-school.html">Head of School</a>
-          <a href="associate-head-of-school.html">Associate Head of School</a>
-          <a href="faculty.html">Faculty</a>
-        </div>
-      </li>
-      <li>
-        <button onclick="toggleMenu(this)" aria-haspopup="true">
-          Academics <span class="chevron">▾</span>
-        </button>
-        <div class="dropdown">
-          <a href="curriculum.html">Curriculum</a>
-          <a href="dress-code.html">Dress Code</a>
-        </div>
-      </li>
-      <li>
-        <button onclick="toggleMenu(this)" aria-haspopup="true">
-          Admissions <span class="chevron">▾</span>
-        </button>
-        <div class="dropdown">
-          <a href="application.html">Application</a>
-          <a href="tuition-1.html">Tuition</a>
-          <a href="payments.html">Payments</a>
-        </div>
-      </li>
-      <li><a href="giving.html">Giving</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="application.html" class="nav-cta">Apply Now →</a></li>
-    </ul>
-
-    <button class="hamburger" onclick="openMobileNav()" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- ── MOBILE NAV ─────────────────────────────────────────────── -->
-<div class="mobile-nav" id="mobileNav">
-  <button class="mobile-nav-close" onclick="closeMobileNav()" style="margin-top:64px;">✕</button>
-  <a href="#">About Us</a>
-  <a href="our-mission.html" class="sub">Our Mission</a>
-  <a href="our-vision.html" class="sub">Our Vision</a>
-  <a href="head-of-school.html" class="sub">Head of School</a>
-  <a href="associate-head-of-school.html" class="sub">Associate Head of School</a>
-  <a href="faculty.html" class="sub">Faculty</a>
-  <a href="#">Academics</a>
-  <a href="curriculum.html" class="sub">Curriculum</a>
-  <a href="dress-code.html" class="sub">Dress Code</a>
-  <a href="#">Admissions</a>
-  <a href="application.html" class="sub">Application</a>
-  <a href="tuition-1.html" class="sub">Tuition</a>
-  <a href="payments.html" class="sub">Payments</a>
-  <a href="giving.html">Giving</a>
-  <a href="careers.html">Careers</a>
-  <a href="application.html" class="cta">Apply Now →</a>
-  <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer" style="margin-top:0;">Facebook →</a>
-  <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer" style="margin-top:0;">Instagram →</a>
-</div>
+<!-- Navigation -->
+<div id="nav-placeholder"></div>
 
 <!-- ── PAGE HERO ──────────────────────────────────────────────── -->
 <div class="page-hero">
@@ -246,7 +158,7 @@
 
   <p class="section-label">Programs &amp; Approach</p>
 
-  <!-- PRE-K ───────────────────────────────────────────────────── -->
+  <!-- PRE-K -->
   <div class="prek-callout">
     <div>
       <p class="prek-callout-label">Pre-Kindergarten</p>
@@ -257,118 +169,113 @@
     </p>
   </div>
 
-  <!-- K–2 ─────────────────────────────────────────────────────── -->
+  <!-- K–2 -->
   <div class="grade-band">
     <div class="grade-band-header">
       <span class="grade-badge">K – 2nd Grade</span>
       <div class="grade-band-header-line"></div>
     </div>
-
     <div class="curriculum-grid">
-
       <div class="curriculum-card">
         <p class="card-subject">English Language Arts</p>
         <h3 class="card-program">Superkids</h3>
         <p class="card-description">A comprehensive ELA curriculum for grades K–2 built on evidence-based literacy practices. Superkids follows a systematic and explicit instructional path through engaging, increasingly complex text.</p>
       </div>
-
       <div class="curriculum-card">
         <p class="card-subject">Mathematics</p>
         <h3 class="card-program">Math in Focus</h3>
         <p class="card-description">Grounded in the Singapore approach to math, this program uses consistent visual models so students tackle concepts normally reserved for later grades, with a strong emphasis on real-world application.</p>
       </div>
-
       <div class="curriculum-card">
         <p class="card-subject">Science</p>
         <h3 class="card-program">Five Ponds Press Science</h3>
         <p class="card-description">Students explore the relationships between science, technology, engineering, and math (STEM), applying inquiry skills and building a deep understanding of the nature of science.</p>
       </div>
-
       <div class="curriculum-card">
         <p class="card-subject">Social Studies</p>
         <h3 class="card-program">Five Ponds Press Social Studies</h3>
         <p class="card-description">Focused on each standard of learning for history, geography, economics, and civics, this program builds deep understanding across all four disciplines.</p>
       </div>
-
     </div>
   </div>
 
   <hr class="band-divider" />
 
-  <!-- 3–8 ─────────────────────────────────────────────────────── -->
+  <!-- 3–8 -->
   <div class="grade-band">
     <div class="grade-band-header">
       <span class="grade-badge">3rd – 8th Grade</span>
       <div class="grade-band-header-line"></div>
     </div>
-
     <div class="curriculum-grid">
-
       <div class="curriculum-card">
         <p class="card-subject">Grammar</p>
         <h3 class="card-program">Voyages in English</h3>
         <p class="card-description">Prepares students to become literate masters — better writers, readers, listeners, and speakers — through a rigorous, structured approach to grammar and composition.</p>
       </div>
-
       <div class="curriculum-card">
         <p class="card-subject">Word Study</p>
         <h3 class="card-program">Wordly Wise</h3>
         <p class="card-description">Vocabulary instruction designed to develop the critical link between word knowledge and reading comprehension, building academic language across content areas.</p>
       </div>
-
       <div class="curriculum-card">
         <p class="card-subject">Mathematics</p>
         <h3 class="card-program">Math in Focus</h3>
         <p class="card-description">Continuing the Singapore math approach, students build on prior models to tackle increasingly complex concepts with a sustained emphasis on reasoning and application.</p>
       </div>
-
       <div class="curriculum-card">
         <p class="card-subject">Novel Studies</p>
         <h3 class="card-program">Read Side-by-Side</h3>
         <p class="card-description">A highly motivating program tailored for middle-grade students. Trade books teach students to use text structure as a strategy for deeper comprehension and genuine enjoyment of reading.</p>
       </div>
-
       <div class="curriculum-card">
         <p class="card-subject">Science</p>
         <h3 class="card-program">Five Ponds Press Science</h3>
         <p class="card-description">Students continue exploring STEM relationships, applying inquiry skills and incorporating nature of science understandings across increasingly complex topics.</p>
       </div>
-
       <div class="curriculum-card">
         <p class="card-subject">Social Studies</p>
         <h3 class="card-program">Five Ponds Press Social Studies</h3>
         <p class="card-description">Students focus on each standard of learning for history, geography, economics, and civics, developing a deep understanding across all four disciplines.</p>
       </div>
-
     </div>
   </div>
 
 </main>
 
-<!-- ── FOOTER ─────────────────────────────────────────────────── -->
-<footer>
-  © 2026 Harbor Light Academy &nbsp;·&nbsp; 14353 Benns Church Blvd, Smithfield, VA
-  &nbsp;·&nbsp;
-  <a href="mailto:admissions@harborlightacademy.com">admissions@harborlightacademy.com</a>
-</footer>
+<!-- Footer -->
+<div id="footer-placeholder"></div>
 
 <script>
-  function toggleMenu(btn) {
-    const li = btn.parentElement;
-    const isOpen = li.classList.contains('open');
-    document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) li.classList.add('open');
+  function loadPartial(id, file) {
+    fetch(file)
+      .then(r => r.text())
+      .then(html => { document.getElementById(id).innerHTML = html; })
+      .catch(() => console.warn('Could not load partial:', file));
   }
+  loadPartial('nav-placeholder',    'navigation.html');
+  loadPartial('footer-placeholder', 'footer.html');
+
   document.addEventListener('click', e => {
+    const btn = e.target.closest('#navLinks button');
+    if (btn) {
+      const li = btn.parentElement;
+      const isOpen = li.classList.contains('open');
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) li.classList.add('open');
+      return;
+    }
     if (!e.target.closest('#navLinks'))
       document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
   });
+
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
       closeMobileNav();
     }
   });
+
   function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    document.body.style.overflow = 'hidden'; }
   function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = '';       }
 </script>
