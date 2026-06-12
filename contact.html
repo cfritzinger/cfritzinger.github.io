@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Harbor Light Academy</title>
+  <meta name="description" content="Get in touch with Harbor Light Academy in Smithfield, VA. We'd love to hear from you." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #ffffff; color: #111111; }
+
+    /* Two-column layout: form left, info right */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* Form fields */
+    .contact-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .contact-field:last-of-type { margin-bottom: 0; }
+
+    label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid rgba(26,32,80,0.18);
+      border-radius: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.95rem;
+      color: var(--slate);
+      background: #fff;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      outline: none;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+    }
+    textarea { resize: vertical; min-height: 140px; }
+
+    /* Checkbox opt-in */
+    .optin-field {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 20px 0 28px;
+    }
+    .optin-field input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .optin-field span {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: #555;
+    }
+
+    /* Submit button */
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-submit:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+    .btn-submit:active { transform: none; }
+
+    /* Success message */
+    .success-msg {
+      display: none;
+      background: #ecf8f0;
+      border: 1.5px solid #5bb37a;
+      border-radius: 8px;
+      padding: 18px 24px;
+      color: #1a5c33;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    /* Info sidebar */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .info-card {
+      background: var(--navy);
+      border-radius: 10px;
+      padding: 28px 28px;
+    }
+    .info-card-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .info-card p {
+      font-size: 0.93rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 8px;
+    }
+    .info-card p:last-child { margin-bottom: 0; }
+    .info-card a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .info-card a:hover { color: var(--gold-light); text-decoration: underline; }
+
+    .info-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin: 14px 0;
+    }
+
+    @media (max-width: 860px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .contact-info { order: -1; }
+    }
+
+    .mobile-nav-close { margin-top: 64px !important; }
+    .nav-fb {
+      display: flex !important;
+      align-items: center;
+      padding: 8px 10px !important;
+      color: rgba(255,255,255,0.65) !important;
+      transition: color 0.15s !important;
+    }
+    .nav-fb:hover { color: #1877F2 !important; background: rgba(255,255,255,0.08) !important; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div id="nav-placeholder"></div>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────────── -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-text">
+    <p class="eyebrow">Harbor Light Academy</p>
+    <h1>Contact Us</h1>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+<main>
+
+  <p class="section-label">Get in Touch</p>
+
+  <div class="contact-layout">
+
+    <!-- Contact Form -->
+    <div>
+      <div id="successMsg" class="success-msg">
+        ✓ Your message has been sent! We'll be in touch soon.
+      </div>
+
+      <form id="contactForm" action="https://formspree.io/f/admissions@harborlightacademy.com" method="POST" novalidate>
+
+        <div class="contact-field">
+          <label for="name">Name <span style="color:#c0392b">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+
+        <div class="contact-field">
+          <label for="email">Email <span style="color:#c0392b">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="contact-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="How can we help you?"></textarea>
+        </div>
+
+        <div class="optin-field">
+          <input type="checkbox" id="emailList" name="emailList" value="yes" />
+          <span>Sign up for our email list for updates.</span>
+        </div>
+
+        <button type="submit" class="btn-submit">Send →</button>
+
+      </form>
+    </div>
+
+    <!-- Contact Info Sidebar -->
+    <aside class="contact-info">
+
+      <div class="info-card">
+        <p class="info-card-label">Admissions</p>
+        <p>
+          <a href="mailto:admissions@harborlightacademy.com">admissions@harborlightacademy.com</a>
+        </p>
+        <div class="info-divider"></div>
+        <p class="info-card-label">Location</p>
+        <p>14353 Benns Church Blvd<br>Smithfield, VA</p>
+        <div class="info-divider"></div>
+        <p class="info-card-label">Follow Us</p>
+        <p>
+          <a href="https://www.facebook.com/profile.php?id=61588515929887" target="_blank" rel="noopener noreferrer">Facebook</a>
+          &nbsp;·&nbsp;
+          <a href="https://www.instagram.com/harborlightacademy/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-card-label">Quick Links</p>
+        <p><a href="application.html">Apply Now →</a></p>
+        <p><a href="tuition-1.html">Tuition &amp; Fees →</a></p>
+        <p><a href="giving.html">Support Our Mission →</a></p>
+      </div>
+
+    </aside>
+
+  </div>
+
+</main>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+  function loadPartial(id, file) {
+    fetch(file)
+      .then(r => r.text())
+      .then(html => { document.getElementById(id).innerHTML = html; })
+      .catch(() => console.warn('Could not load partial:', file));
+  }
+  loadPartial('nav-placeholder',    'navigation.html');
+  loadPartial('footer-placeholder', 'footer.html');
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('#navLinks button');
+    if (btn) {
+      const li = btn.parentElement;
+      const isOpen = li.classList.contains('open');
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) li.classList.add('open');
+      return;
+    }
+    if (!e.target.closest('#navLinks'))
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      closeMobileNav();
+    }
+  });
+  function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    document.body.style.overflow = 'hidden'; }
+  function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = '';       }
+
+  /* Form submission */
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!this.checkValidity()) { this.reportValidity(); return; }
+
+    const data = new FormData(this);
+    fetch(this.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(res => {
+      if (res.ok) {
+        const msg = document.getElementById('successMsg');
+        msg.style.display = 'block';
+        this.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
+        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        alert('There was a problem sending your message. Please email us directly at admissions@harborlightacademy.com.');
+      }
+    }).catch(() => {
+      alert('There was a problem sending your message. Please email us directly at admissions@harborlightacademy.com.');
+    });
+  });
+</script>
+
+</body>
+</html>
