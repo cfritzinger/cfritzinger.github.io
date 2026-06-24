@@ -8,71 +8,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* PDF card */
-    .pdf-card {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: var(--gold-pale);
-      border: 1.5px solid rgba(201,168,76,0.35);
-      border-radius: 10px;
-      padding: 22px 28px;
-      margin-bottom: 40px;
-      text-decoration: none;
-      transition: box-shadow 0.15s, transform 0.15s;
+    /* Intro copy above the form */
+    .apply-intro {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 300;
+      font-size: 1.05rem;
+      color: var(--slate);
+      line-height: 1.65;
+      margin: 0 0 32px;
     }
-    .pdf-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
-    }
-    .pdf-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--navy);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .pdf-card-text strong {
-      display: block;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--navy-dark);
-      margin-bottom: 2px;
-    }
-    .pdf-card-text span {
-      font-size: 0.82rem;
-      color: rgba(26,32,80,0.6);
-    }
+    .apply-intro a { color: var(--gold); font-weight: 600; text-decoration: none; }
+    .apply-intro a:hover { text-decoration: underline; }
 
-    /* PDF viewer */
-    .pdf-viewer-wrap {
+    /* Jotform embed card */
+    .jotform-card {
       width: 100%;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 32px rgba(0,0,0,0.13);
       border: 1px solid rgba(26,32,80,0.1);
-      background: #525659;
+      background: #ffffff;
     }
-    .pdf-viewer-wrap iframe {
+    .jotform-card iframe {
       display: block;
       width: 100%;
-      height: 1800px;
+      min-height: 1400px;
       border: none;
     }
-    .pdf-fallback {
-      padding: 48px 32px;
+    .jotform-fallback {
       text-align: center;
-      color: rgba(255,255,255,0.7);
-      font-size: 0.92rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(26,32,80,0.55);
+      margin-top: 18px;
     }
-    .pdf-fallback a { color: var(--gold); font-weight: 700; }
-
-    @media (max-width: 640px) {
-      .pdf-viewer-wrap iframe { height: 1800px; }
-    }
+    .jotform-fallback a { color: var(--gold); font-weight: 700; text-decoration: none; }
+    .jotform-fallback a:hover { text-decoration: underline; }
 
     /* Nav extras */
     .mobile-nav-close { margin-top: 64px !important; }
@@ -110,30 +81,37 @@
 <!-- ── MAIN ───────────────────────────────────────────────────── -->
 <main>
 
-  <div class="section-label">Download &amp; Print</div>
+  <div class="section-label">Apply Online</div>
 
-  <a href="https://img1.wsimg.com/blobby/go/d5eb1ff2-2716-43f2-9f5a-33c0b954b636/HLA%20Application.pdf"
-     target="_blank" rel="noopener noreferrer" class="pdf-card" download>
-    <div class="pdf-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--gold)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
-    </div>
-    <div class="pdf-card-text">
-      <strong>HLA Application 2026–27 (PDF)</strong>
-      <span>Download, print, and return to admissions@harborlightacademy.com</span>
-    </div>
-  </a>
+  <p class="apply-intro">
+    Complete the application below to begin the admissions process for the 2026–27 school year.
+    Questions along the way? Reach out to
+    <a href="mailto:admissions@harborlightacademy.com">admissions@harborlightacademy.com</a>
+    or <a href="tel:7576960900">(757) 696-0900</a>.
+  </p>
 
-  <div class="pdf-viewer-wrap">
+  <div class="jotform-card">
     <iframe
-      src="https://img1.wsimg.com/blobby/go/d5eb1ff2-2716-43f2-9f5a-33c0b954b636/HLA%20Application.pdf"
+      id="JotFormIFrame-260615105551145"
       title="Harbor Light Academy Application 2026–27"
-      aria-label="Application PDF viewer">
-      <div class="pdf-fallback">
-        Your browser does not support embedded PDFs.
-        <a href="https://img1.wsimg.com/blobby/go/d5eb1ff2-2716-43f2-9f5a-33c0b954b636/HLA%20Application.pdf" target="_blank" rel="noopener noreferrer">Open the PDF directly →</a>
-      </div>
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen"
+      src="https://form.jotform.com/260615105551145"
+      frameborder="0"
+      style="min-width:100%;height:1400px;border:none;"
+      scrolling="no">
     </iframe>
   </div>
+
+  <p class="jotform-fallback">
+    Having trouble viewing the form? <a href="https://form.jotform.com/260615105551145" target="_blank" rel="noopener noreferrer">Open it in a new tab →</a>
+  </p>
+
+  <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+  <script>
+    window.jotformEmbedHandler("iframe[id='JotFormIFrame-260615105551145']", "https://form.jotform.com/");
+  </script>
 
 </main>
 
