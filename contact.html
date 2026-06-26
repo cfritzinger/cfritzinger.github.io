@@ -192,35 +192,17 @@
 
     <!-- Contact Form -->
     <div>
-      <div id="successMsg" class="success-msg">
-        ✓ Your message has been sent! We'll be in touch soon.
-      </div>
-
-      <form id="contactForm" action="https://formspree.io/f/admissions@harborlightacademy.com" method="POST" novalidate>
-
-        <div class="contact-field">
-          <label for="name">Name <span style="color:#c0392b">*</span></label>
-          <input type="text" id="name" name="name" placeholder="Your full name" required />
-        </div>
-
-        <div class="contact-field">
-          <label for="email">Email <span style="color:#c0392b">*</span></label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
-        </div>
-
-        <div class="contact-field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="How can we help you?"></textarea>
-        </div>
-
-        <div class="optin-field">
-          <input type="checkbox" id="emailList" name="emailList" value="yes" />
-          <span>Sign up for our email list for updates.</span>
-        </div>
-
-        <button type="submit" class="btn-submit">Send →</button>
-
-      </form>
+      <iframe
+        id="JotFormIFrame-261757645110052"
+        title="HLA Contact Form"
+        onload="window.parent.scrollTo(0,0)"
+        allowtransparency="true"
+        allow="geolocation; microphone; camera; fullscreen"
+        src="https://form.jotform.com/261757645110052"
+        frameborder="0"
+        style="width:100%; min-height:539px; border:none;"
+        scrolling="no"
+      ></iframe>
     </div>
 
     <!-- Contact Info Sidebar -->
@@ -292,30 +274,12 @@
   });
   function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    document.body.style.overflow = 'hidden'; }
   function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = '';       }
+</script>
 
-  /* Form submission */
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    if (!this.checkValidity()) { this.reportValidity(); return; }
-
-    const data = new FormData(this);
-    fetch(this.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(res => {
-      if (res.ok) {
-        const msg = document.getElementById('successMsg');
-        msg.style.display = 'block';
-        this.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
-        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        alert('There was a problem sending your message. Please email us directly at admissions@harborlightacademy.com.');
-      }
-    }).catch(() => {
-      alert('There was a problem sending your message. Please email us directly at admissions@harborlightacademy.com.');
-    });
-  });
+<!-- Jotform embed handler (enables auto-resizing of the embedded form) -->
+<script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+<script>
+  window.jotformEmbedHandler("iframe[id='JotFormIFrame-261757645110052']", "https://form.jotform.com/");
 </script>
 
 </body>
