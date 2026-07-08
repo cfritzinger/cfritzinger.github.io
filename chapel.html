@@ -38,8 +38,10 @@
 
     .mission-logo {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
     .mission-logo img {
       width: 100%;
@@ -70,15 +72,15 @@
       line-height: 1.85;
       color: #333;
     }
-    .mission-text .pastor-name {
+    .pastor-name {
       display: block;
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       font-weight: 700;
       color: var(--navy);
-      margin-top: 22px;
+      margin-top: 20px;
     }
-    .mission-text .pastor-title {
+    .pastor-title {
       display: block;
       font-size: 0.95rem;
       color: #555;
@@ -176,22 +178,22 @@
   <div class="mission-block">
 
     <div class="mission-logo">
-      <img src="images/nathan-webb.jpg" alt="Pastor Nathan Webb" />
+      <img src="images/pastor-nathan-webb.jpg" alt="Pastor Nathan Webb" />
+      <span class="pastor-name">Pastor Nathan Webb</span>
+      <span class="pastor-title">Coastal Community Church</span>
     </div>
 
     <div class="mission-text">
       <p class="role">Chapel Leadership</p>
       <h2>Growing in Faith, Together</h2>
       <p>Pastor Nathan Webb of Coastal Community Church leads a rotating team of local pastors and school leaders who encourage students to grow in their relationship with Jesus through this time of prayer, music, scripture, and discussion.</p>
-      <span class="pastor-name">Pastor Nathan Webb</span>
-      <span class="pastor-title">Coastal Community Church</span>
     </div>
 
   </div>
 
   <div class="chapel-partner">
     <p class="role">In Partnership With</p>
-    <img src="images/coastal.jpg" alt="Coastal Community Church" />
+    <img src="https://gocoastal.org/wp-content/uploads/2024/10/Coastal-Website-Logo.webp" alt="Coastal Community Church" />
     <h2>Coastal Community Church</h2>
     <a class="partner-link" href="https://gocoastal.org/batterypark/" target="_blank" rel="noopener noreferrer">Visit Coastal Community Church →</a>
   </div>
