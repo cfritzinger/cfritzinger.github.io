@@ -125,8 +125,8 @@
       margin-bottom: 44px;
     }
 
-    .supply-print { text-align: center; margin-top: 8px; }
-    .supply-print button {
+    .supply-print { text-align: center; margin-top: 8px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .supply-print a {
       font-family: 'Source Sans 3', sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
@@ -137,10 +137,11 @@
       border: 1.5px solid var(--navy);
       border-radius: 6px;
       padding: 11px 26px;
-      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
       transition: background 0.15s, color 0.15s;
     }
-    .supply-print button:hover { background: var(--navy); color: var(--white); }
+    .supply-print a:hover { background: var(--navy); color: var(--white); }
 
     @media print {
       nav, .mobile-nav, footer, .supply-print { display: none !important; }
@@ -326,7 +327,8 @@
   </div>
 
   <div class="supply-print">
-    <button onclick="window.print()">Print this list</button>
+    <a href="2026-2027-supply-list-1.pdf" target="_blank" rel="noopener noreferrer">Download PDF (Preschool&ndash;2nd)</a>
+    <a href="2026-2027-supply-list-2.pdf" target="_blank" rel="noopener noreferrer">Download PDF (3rd&ndash;6th)</a>
   </div>
 
 </main>
