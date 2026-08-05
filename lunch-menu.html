@@ -87,6 +87,13 @@
       color: var(--gold-light);
       line-height: 1;
       display: block;
+      font-variant-numeric: lining-nums;
+    }
+    .price-stat .amount .currency {
+      font-size: 0.55em;
+      font-weight: 700;
+      vertical-align: 0.28em;
+      margin-right: 1px;
     }
     .price-stat .label {
       margin-top: 10px;
@@ -228,12 +235,12 @@
   <!-- ── PRICING — front and center ── -->
   <div class="price-banner">
     <div class="price-stat">
-      <span class="amount">$8</span>
+      <span class="amount"><span class="currency">$</span>8</span>
       <span class="label">Per Lunch</span>
     </div>
     <div class="price-divider"></div>
     <div class="price-stat">
-      <span class="amount">$1</span>
+      <span class="amount"><span class="currency">$</span>1</span>
       <span class="label">Per Extra Side</span>
     </div>
   </div>
