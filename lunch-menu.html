@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunch Menu — Harbor Light Academy</title>
+  <meta name="description" content="Harbor Light Academy 2026-27 lunch menu — daily hot lunch options, sides, and pricing." />
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "102f3471d64744a490f6c7a74d954b9e"}'></script>
+  <!-- End Cloudflare Web Analytics --> 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #ffffff; color: #111111; }
+
+    .dress-intro {
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto 64px;
+    }
+    .dress-intro p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--navy);
+      line-height: 1.65;
+    }
+
+    .dress-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .dress-card {
+      background: #ffffff;
+      border: 1px solid rgba(26, 32, 80, 0.1);
+      border-top: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 28px 24px 32px;
+      transition: box-shadow 0.18s, transform 0.18s;
+      width: 100%;
+      text-align: center;
+    }
+    .dress-card:hover {
+      box-shadow: 0 8px 32px rgba(26, 32, 80, 0.1);
+      transform: translateY(-3px);
+    }
+    .dress-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(26,32,80,0.08);
+    }
+    .dress-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+    }
+    .dress-card ul li {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #444;
+      padding-left: 14px;
+      position: relative;
+    }
+    .dress-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .dress-intro p { font-size: 1rem; }
+    }
+
+    .mobile-nav-close { margin-top: 64px !important; }
+    .nav-fb {
+      display: flex !important;
+      align-items: center;
+      padding: 8px 10px !important;
+      color: rgba(255,255,255,0.65) !important;
+      transition: color 0.15s !important;
+    }
+    .nav-fb:hover { color: #1877F2 !important; background: rgba(255,255,255,0.08) !important; }
+
+    /* ── Lunch-menu-specific additions ──────────────────────── */
+    .lunch-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: -6px;
+      margin-bottom: 44px;
+      font-style: italic;
+    }
+    .dress-card.price-card {
+      max-width: 420px;
+      margin: 8px auto 0;
+    }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 6px 4px;
+      font-size: 0.97rem;
+      color: #444;
+    }
+    .price-row + .price-row {
+      border-top: 1px solid rgba(26,32,80,0.06);
+    }
+    .price-row span:first-child {
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .price-row span:last-child {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div id="nav-placeholder"></div>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────────── -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-text">
+    <p class="eyebrow">Academics</p>
+    <h1>Lunch Menu</h1>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────────────────── -->
+<main>
+
+  <div class="dress-intro">
+    <p>Our 2026&ndash;27 lunch program offers a fresh hot lunch option each school day, with sides and bottled water included.</p>
+  </div>
+  <p class="lunch-note">Sides are subject to change.</p>
+
+  <p class="section-label">Weekly Menu</p>
+
+  <div class="dress-grid">
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Monday</h2>
+      <ul>
+        <li>Mariners Box Lunch: Uncrustable</li>
+        <li>One side</li>
+        <li>Bottled water</li>
+        <li>A special treat</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Tuesday</h2>
+      <ul>
+        <li>Publix popcorn chicken</li>
+        <li>One side</li>
+        <li>Bottled water</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Wednesday</h2>
+      <ul>
+        <li>Anna's Box Lunch spaghetti</li>
+        <li>Bread stick</li>
+        <li>One side</li>
+        <li>Bottled water</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Thursday</h2>
+      <ul>
+        <li>Hardee's grilled cheese</li>
+        <li>Applesauce</li>
+        <li>Juice box</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Friday</h2>
+      <ul>
+        <li>Sal's cheese pizza</li>
+        <li>One side</li>
+        <li>Bottled water</li>
+      </ul>
+    </div>
+
+    <div class="dress-card">
+      <h2 class="dress-card-title">Sides</h2>
+      <ul>
+        <li>Applesauce</li>
+        <li>Potato chips</li>
+        <li>Goldfish</li>
+        <li>Pretzels</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="section-label" style="margin-top:64px;">Pricing</p>
+
+  <div class="dress-card price-card">
+    <div class="price-row">
+      <span>Lunches</span>
+      <span>$8</span>
+    </div>
+    <div class="price-row">
+      <span>Extra Sides</span>
+      <span>$1</span>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+  function loadPartial(id, file) {
+    fetch(file)
+      .then(r => r.text())
+      .then(html => { document.getElementById(id).innerHTML = html; })
+      .catch(() => console.warn('Could not load partial:', file));
+  }
+  loadPartial('nav-placeholder',    'navigation.html');
+  loadPartial('footer-placeholder', 'footer.html');
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('#navLinks button');
+    if (btn) {
+      const li = btn.parentElement;
+      const isOpen = li.classList.contains('open');
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) li.classList.add('open');
+      return;
+    }
+    if (!e.target.closest('#navLinks'))
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('#navLinks > li.open').forEach(el => el.classList.remove('open'));
+      closeMobileNav();
+    }
+  });
+
+  function openMobileNav()  { document.getElementById('mobileNav').classList.add('open');    document.body.style.overflow = 'hidden'; }
+  function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = '';       }
+</script>
+
+</body>
+</html>
