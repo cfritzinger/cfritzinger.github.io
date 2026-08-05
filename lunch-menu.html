@@ -16,7 +16,7 @@
     .dress-intro {
       text-align: center;
       max-width: 580px;
-      margin: 0 auto 64px;
+      margin: 0 auto 40px;
     }
     .dress-intro p {
       font-family: 'Playfair Display', serif;
@@ -24,63 +24,6 @@
       font-size: clamp(1rem, 2vw, 1.2rem);
       color: var(--navy);
       line-height: 1.65;
-    }
-
-    .dress-grid {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    .dress-card {
-      background: #ffffff;
-      border: 1px solid rgba(26, 32, 80, 0.1);
-      border-top: 3px solid var(--gold);
-      border-radius: 10px;
-      padding: 28px 24px 32px;
-      transition: box-shadow 0.18s, transform 0.18s;
-      width: 100%;
-      text-align: center;
-    }
-    .dress-card:hover {
-      box-shadow: 0 8px 32px rgba(26, 32, 80, 0.1);
-      transform: translateY(-3px);
-    }
-    .dress-card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(26,32,80,0.08);
-    }
-    .dress-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 9px;
-    }
-    .dress-card ul li {
-      font-size: 0.92rem;
-      line-height: 1.55;
-      color: #444;
-      padding-left: 14px;
-      position: relative;
-    }
-    .dress-card ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      flex-shrink: 0;
     }
 
     @media (max-width: 640px) {
@@ -97,39 +40,166 @@
     }
     .nav-fb:hover { color: #1877F2 !important; background: rgba(255,255,255,0.08) !important; }
 
-    /* ── Lunch-menu-specific additions ──────────────────────── */
-    .lunch-note {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: -6px;
-      margin-bottom: 44px;
-      font-style: italic;
-    }
-    .dress-card.price-card {
-      max-width: 420px;
-      margin: 8px auto 0;
-    }
-    .price-row {
+    /* ══ PRICING BANNER — prominent, up top ══════════════════ */
+    .price-banner {
+      position: relative;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin: 0 auto 64px;
+      max-width: 720px;
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 6px 4px;
-      font-size: 0.97rem;
-      color: #444;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(16,20,53,0.22);
     }
-    .price-row + .price-row {
-      border-top: 1px solid rgba(26,32,80,0.06);
+    .price-banner::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(201,168,76,0.28) 0%, rgba(201,168,76,0) 70%);
+      pointer-events: none;
     }
-    .price-row span:first-child {
-      font-weight: 600;
-      color: var(--navy);
+    .price-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(201,168,76,0.35);
+      border-radius: 16px;
+      pointer-events: none;
     }
-    .price-row span:last-child {
+    .price-stat {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .price-stat .amount {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: clamp(2.4rem, 6vw, 3.2rem);
+      color: var(--gold-light);
+      line-height: 1;
+      display: block;
+    }
+    .price-stat .label {
+      margin-top: 10px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+    }
+    .price-divider {
+      position: relative;
+      z-index: 1;
+      width: 1px;
+      align-self: stretch;
+      background: rgba(201,168,76,0.35);
+      margin: 4px 0;
+    }
+    @media (max-width: 560px) {
+      .price-banner { flex-direction: column; gap: 24px; padding: 32px 24px; }
+      .price-divider { width: 60%; height: 1px; align-self: center; }
+    }
+
+    /* ══ WEEKLY MENU — day cards with badges & chips ═════════ */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-bottom: 56px;
+    }
+    .day-card {
+      background: #ffffff;
+      border: 1px solid rgba(26,32,80,0.09);
+      border-radius: 14px;
+      padding: 26px 24px 24px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+      position: relative;
+    }
+    .day-card:hover {
+      box-shadow: 0 14px 36px rgba(26,32,80,0.14);
+      transform: translateY(-4px);
+      border-color: rgba(201,168,76,0.4);
+    }
+    .day-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
       font-family: 'Playfair Display', serif;
       font-weight: 700;
-      color: var(--gold);
-      font-size: 1.05rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(26,32,80,0.25);
+      border: 2px solid var(--gold);
+    }
+    .day-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .day-card .headline {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 7px;
+    }
+    .chip {
+      display: inline-block;
+      background: var(--gold-pale);
+      color: var(--navy);
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,168,76,0.4);
+      white-space: nowrap;
+    }
+
+    /* Sides section — distinct chip cloud on navy strip */
+    .sides-panel {
+      background: var(--stone);
+      border-radius: 14px;
+      padding: 36px 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sides-panel .day-card-title { margin-bottom: 18px; }
+    .sides-panel .chip-row { gap: 10px; }
+    .sides-panel .chip {
+      background: #ffffff;
+      font-size: 0.85rem;
+      padding: 8px 16px;
+    }
+    .sides-note {
+      margin-top: 18px;
+      font-size: 0.78rem;
+      color: #777;
+      font-style: italic;
     }
   </style>
 </head>
@@ -153,82 +223,87 @@
   <div class="dress-intro">
     <p>Our 2026&ndash;27 lunch program offers a fresh hot lunch option each school day, with sides and bottled water included.</p>
   </div>
-  <p class="lunch-note">Sides are subject to change.</p>
+
+  <!-- ── PRICING — front and center ── -->
+  <div class="price-banner">
+    <div class="price-stat">
+      <span class="amount">$8</span>
+      <span class="label">Per Lunch</span>
+    </div>
+    <div class="price-divider"></div>
+    <div class="price-stat">
+      <span class="amount">$1</span>
+      <span class="label">Per Extra Side</span>
+    </div>
+  </div>
 
   <p class="section-label">Weekly Menu</p>
 
-  <div class="dress-grid">
+  <div class="menu-grid">
 
-    <div class="dress-card">
-      <h2 class="dress-card-title">Monday</h2>
-      <ul>
-        <li>Mariners Box Lunch: Uncrustable</li>
-        <li>One side</li>
-        <li>Bottled water</li>
-        <li>A special treat</li>
-      </ul>
+    <div class="day-card">
+      <div class="day-badge">Mon</div>
+      <h2 class="day-card-title">Monday</h2>
+      <p class="headline">Mariners Box Lunch — Uncrustable</p>
+      <div class="chip-row">
+        <span class="chip">One Side</span>
+        <span class="chip">Bottled Water</span>
+        <span class="chip">Special Treat</span>
+      </div>
     </div>
 
-    <div class="dress-card">
-      <h2 class="dress-card-title">Tuesday</h2>
-      <ul>
-        <li>Publix popcorn chicken</li>
-        <li>One side</li>
-        <li>Bottled water</li>
-      </ul>
+    <div class="day-card">
+      <div class="day-badge">Tue</div>
+      <h2 class="day-card-title">Tuesday</h2>
+      <p class="headline">Publix Popcorn Chicken</p>
+      <div class="chip-row">
+        <span class="chip">One Side</span>
+        <span class="chip">Bottled Water</span>
+      </div>
     </div>
 
-    <div class="dress-card">
-      <h2 class="dress-card-title">Wednesday</h2>
-      <ul>
-        <li>Anna's Box Lunch spaghetti</li>
-        <li>Bread stick</li>
-        <li>One side</li>
-        <li>Bottled water</li>
-      </ul>
+    <div class="day-card">
+      <div class="day-badge">Wed</div>
+      <h2 class="day-card-title">Wednesday</h2>
+      <p class="headline">Anna's Box Lunch Spaghetti</p>
+      <div class="chip-row">
+        <span class="chip">Bread Stick</span>
+        <span class="chip">One Side</span>
+        <span class="chip">Bottled Water</span>
+      </div>
     </div>
 
-    <div class="dress-card">
-      <h2 class="dress-card-title">Thursday</h2>
-      <ul>
-        <li>Hardee's grilled cheese</li>
-        <li>Applesauce</li>
-        <li>Juice box</li>
-      </ul>
+    <div class="day-card">
+      <div class="day-badge">Thu</div>
+      <h2 class="day-card-title">Thursday</h2>
+      <p class="headline">Hardee's Grilled Cheese</p>
+      <div class="chip-row">
+        <span class="chip">Applesauce</span>
+        <span class="chip">Juice Box</span>
+      </div>
     </div>
 
-    <div class="dress-card">
-      <h2 class="dress-card-title">Friday</h2>
-      <ul>
-        <li>Sal's cheese pizza</li>
-        <li>One side</li>
-        <li>Bottled water</li>
-      </ul>
-    </div>
-
-    <div class="dress-card">
-      <h2 class="dress-card-title">Sides</h2>
-      <ul>
-        <li>Applesauce</li>
-        <li>Potato chips</li>
-        <li>Goldfish</li>
-        <li>Pretzels</li>
-      </ul>
+    <div class="day-card">
+      <div class="day-badge">Fri</div>
+      <h2 class="day-card-title">Friday</h2>
+      <p class="headline">Sal's Cheese Pizza</p>
+      <div class="chip-row">
+        <span class="chip">One Side</span>
+        <span class="chip">Bottled Water</span>
+      </div>
     </div>
 
   </div>
 
-  <p class="section-label" style="margin-top:64px;">Pricing</p>
-
-  <div class="dress-card price-card">
-    <div class="price-row">
-      <span>Lunches</span>
-      <span>$8</span>
+  <div class="sides-panel">
+    <h2 class="day-card-title">Available Sides</h2>
+    <div class="chip-row">
+      <span class="chip">Applesauce</span>
+      <span class="chip">Potato Chips</span>
+      <span class="chip">Goldfish</span>
+      <span class="chip">Pretzels</span>
     </div>
-    <div class="price-row">
-      <span>Extra Sides</span>
-      <span>$1</span>
-    </div>
+    <p class="sides-note">Sides are subject to change.</p>
   </div>
 
 </main>
